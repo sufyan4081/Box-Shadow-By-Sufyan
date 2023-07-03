@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-.container__app{
+.container__app {
     display: flex;
 }
 
-.slider__box{
+.slider__box {
     flex: 0.5;
     background-color: whitesmoke;
     height: 100vh;
@@ -17,16 +17,16 @@
     align-items: center;
 }
 
-.shadow__box{
+.shadow__box {
     flex: 0.5;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.shadow__div{
+.shadow__div {
     /* width: 30vw; */
     border: 2px solid;
     /* height: 58vh; */
@@ -39,56 +39,58 @@
 }
 
 
-.shadow__content{
+.shadow__content {
     width: 23vw;
     border: 1px solid;
-    height: 18vh;
+    height: 20vh;
     padding: 10px;
     border-radius: 10px;
     /* overflow: scroll; */
 }
 
-table{
+table {
     width: 35vw;
     padding: 10px;
 }
 
-.tds{
+.tds {
     width: 20vw;
 }
 
 
-td input{
+td input {
     width: 3vw;
     margin-left: 20px;
     text-align: center;
 }
 
-.slider__div{
+.slider__div {
     border: solid;
 }
 
-@media (max-width:1300px){
-    .shadow__content{
+@media (max-width:1300px) {
+    .shadow__content {
         overflow: scroll;
     }
-    
+
 }
 
-@media (max-width:1000px){
-    .shadow__content{
+@media (max-width:1000px) {
+    .shadow__content {
         width: 15vw;
     }
-    .shadow__div{
+
+    .shadow__div {
         height: 30vh !important;
     }
 }
 
-@media (max-width:700px){
-    .shadow__content{
+@media (max-width:700px) {
+    .shadow__content {
         width: 30vw;
     }
-    .shadow__div{
+
+    .shadow__div {
         height: 30vh !important;
         width: 40vw !important;
     }

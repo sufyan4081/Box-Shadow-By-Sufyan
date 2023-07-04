@@ -27,11 +27,11 @@
 }
 
 .shadow__div {
-    /* width: 30vw; */
+    min-width: 30vw;
     border: 2px solid;
-    /* height: 58vh; */
+    min-height: 58vh;
     display: flex;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     justify-content: center;
     align-items: center;
     /* border-radius: 10px; */
@@ -81,7 +81,7 @@ td input {
     }
 
     .shadow__div {
-        height: 30vh !important;
+        min-height: 30vh !important;
     }
 }
 
@@ -91,7 +91,7 @@ td input {
     }
 
     .shadow__div {
-        height: 30vh !important;
-        width: 40vw !important;
+        min-height: 30vh !important;
+        min-width: 40vw !important;
     }
 }

@@ -9,38 +9,39 @@ const SliderBox = () => {
   const [spread, setSpread] = useState(-4);
   const [color, setColor] = useState('lightgray');
   const [radius, setRadius] = useState(10)
-  const [height, setHeight] = useState(45)
-  const [width, setWidth] = useState(30)
+  const [height, setHeight] = useState()
+  const [width, setWidth] = useState()
+  const [bcg, setBcg] = useState('aliceblue')
   return (
     <>
-    <div className="container__app">
-      <div className='slider__box'>
+      <div className="container__app">
+        <div className='slider__box'>
           <table className='inner__slider__box'>
             <tbody>
 
               <tr>
                 <td><label htmlFor="x">X&nbsp;:</label></td>
                 <td className='tds'> <Slider className='Slider1' size='small' min={-100} max={100} value={x} aria-label="Default" valueLabelDisplay="auto" onChange={(e) => setX(e.target.value)} /></td>
-                <td> <input type="number" id='x' value={x}  onChange={(e) => setX(e.target.value)}/></td>
+                <td> <input type="number" id='x' value={x} onChange={(e) => setX(e.target.value)} /></td>
               </tr>
-           
 
 
-            
+
+
               <tr>
                 <td> <label htmlFor="y">Y&nbsp;:</label></td>
-                <td> <Slider className='Slider2' size='small' min={-100} max={100} value={y}aria-label="Default" valueLabelDisplay="auto" onChange={(e) => setY(e.target.value)} /></td>
+                <td> <Slider className='Slider2' size='small' min={-100} max={100} value={y} aria-label="Default" valueLabelDisplay="auto" onChange={(e) => setY(e.target.value)} /></td>
                 <td><input type="number" id='y' value={y} onChange={(e) => setY(e.target.value)} /></td>
               </tr>
 
-         
+
               <tr>
                 <td> <label htmlFor="blur">Blur&nbsp;:</label></td>
                 <td><Slider className='Slider3' size='small' min={0} max={100} value={blur} aria-label="Default" valueLabelDisplay="auto" onChange={(e) => setBlur(e.target.value)} /></td>
                 <td> <input type="number" id='blur' value={blur} onChange={(e) => setBlur(e.target.value)} /></td>
               </tr>
 
-          
+
               <tr>
                 <td><label htmlFor="spread">Spread&nbsp;:</label></td>
                 <td><Slider className='Slider4' size='small' min={-100} max={100} value={spread} aria-label="Default" valueLabelDisplay="auto" onChange={(e) => setSpread(e.target.value)} /></td>
@@ -71,13 +72,19 @@ const SliderBox = () => {
 
               <tr>
                 <td>Color : </td>
-                <input type="color" onChange={(e)=>setColor(e.target.value)}  value={color}/>
+                <input type="color" onChange={(e) => setColor(e.target.value)} value={color} />
               </tr>
+
+              <tr>
+                <td>Background Color : </td>
+                <input type="color" onChange={(e) => setBcg(e.target.value)} value={bcg} />
+              </tr>
+
             </tbody>
-            </table>
+          </table>
         </div>
-        <ShadowBox x={x} y={y} blur={blur} spread={spread} color={color} radius={radius} height={height} width={width}/>
-        </div>
+        <ShadowBox x={x} y={y} blur={blur} spread={spread} color={color} radius={radius} height={height} width={width} bcg={bcg} />
+      </div>
     </>
   )
 }
